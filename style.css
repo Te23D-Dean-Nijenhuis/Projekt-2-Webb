@@ -1,0 +1,11 @@
+body
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25vh minmax(75vh, auto);
+}
+
+#BUTIKEN
+{
+    grid-column: 1/4;
+}
