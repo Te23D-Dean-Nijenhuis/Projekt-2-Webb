@@ -2,7 +2,7 @@ body
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 25vh 10vh minmax(75vh, auto);
+    grid-template-rows: 25vh minmax(5vh, auto) minmax(75vh, auto);
     margin: 0;
     font-family: 'Inria Sans'; 
 }
@@ -15,23 +15,101 @@ body
 nav
 {
     grid-column: 1/4;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1f;
+
+    justify-items: center;
+    align-items: center;
+  
     background-color: #000000;
     color: #ffffff;
     font-size: 40px;
     font-weight: bold;
-    align-items: center;
+}
+
+#Om
+{
+    border: solid #ffffff 2px;
+    padding: 5%;
+}
+
+#logga
+{
+    height: 100%;
+}
+
+#Varukorg
+{
+    border: solid #ffffff 2px;
+    padding: 5%;
 }
 
 header
 {
     grid-column: 1/4;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    
     background-color: #000000;
+    justify-items:end;
+    gap: 20px;
 }
-#logga
+
+.Sök
 {
-    height: 60%;
+    display: flex;
+    padding: 0;
+    
+}
+
+#Sökområde, #Sökknapp
+{
+    margin: 5px;
+    min-height: 20px;
+    max-height: 50px;
+}
+
+#Sökknapp
+{
+    aspect-ratio: 1/1;
+    padding: 0;
+}
+.Filter
+{
+    justify-self: start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+}
+
+#FilterDrop
+{
+    height: 85%;
+    width: 100%;
+    color: #666666;
+    font-size: 20px;
+    font-family: 'Inria Sans'; 
+
+}
+
+
+
+
+main
+{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+#Sökikon
+{
+    max-width: 100%;
+    margin: 0;
 }
