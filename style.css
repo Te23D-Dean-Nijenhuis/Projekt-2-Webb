@@ -33,6 +33,7 @@ nav
 {
     border: solid #ffffff 2px;
     padding: 5%;
+    border-radius: 0;
 }
 
 #logga
@@ -44,6 +45,7 @@ nav
 {
     border: solid #ffffff 2px;
     padding: 5%;
+    border-radius: 0;
 }
 
 header
@@ -71,20 +73,29 @@ header
     margin: 5px;
     min-height: 20px;
     max-height: 50px;
+    border-radius: 10px;
 }
 
 #Sökknapp
 {
     aspect-ratio: 1/1;
     padding: 0;
+    overflow: hidden;
 }
+
+#Sökikon
+{
+    max-width: 100%;
+    margin: 0;
+}
+
 .Filter
 {
     justify-self: start;
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 20%;
+    width: 20%
 }
 
 #FilterDrop
@@ -93,12 +104,10 @@ header
     width: 100%;
     color: #666666;
     font-size: 20px;
-    font-family: 'Inria Sans'; 
+    font-family: 'Inria Sans';
+    border-radius: 10px;
 
 }
-
-
-
 
 main
 {
@@ -106,10 +115,29 @@ main
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
 }
 
-#Sökikon
+.VaraContainer
 {
-    max-width: 100%;
-    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6fr 1fr;
+    height: 80%;
+    width: 80%;
+    aspect-ratio: 6/7;
+    border: solid #000000 2px;
+    background-color: #777777;
+}
+
+.varaBild
+{
+    border: solid #000000 2px;
+    
+}
+
+.Varapris
+{
+    border: solid #000000 2px;
 }
