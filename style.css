@@ -134,6 +134,15 @@ main
     {
         grid-template-columns: 1fr 1fr;
     }
+    nav
+    {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .VaraContainer
