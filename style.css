@@ -2,7 +2,7 @@ body
 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 25vh minmax(5vh, auto) min(100vh);
+    grid-template-rows: 25vh minmax(5vh, auto) minmax(100vh auto);
     margin: 0;
     font-family: 'Inria Sans'; 
 }
@@ -124,8 +124,8 @@ main
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 6fr 1fr;
-    width: 18vw;
-    height: 21vw;
+    width: 80%;
+ 
     margin: 5vw;
     border: solid #000000 4px;
     background-color: #b7b7b7;
@@ -145,6 +145,7 @@ main
     border-top: solid #000000 2px;
     overflow: hidden;
     display: flex;
+    height: auto;
 }
 
 #Vara1
