@@ -1,6 +1,6 @@
 window.addEventListener("resize", Flyttaitems);
 
-console.log("metod kallad,", window.innerWidth);
+const Meny = document.getElementById("VarukorgMeny")
 
 
 function Flyttaitems()
@@ -12,7 +12,7 @@ function Flyttaitems()
     let Navbar = document.getElementById("nav");
     let Headerbar = document.getElementById("header");
     
-    if (window.innerWidth < 1024)
+    if (window.innerWidth > 1024)
         {
             Navbar.appendChild(itemVarukorg);
         } else
@@ -21,3 +21,8 @@ function Flyttaitems()
         }
 
 }
+
+function ToggleVarukorg()
+ {
+    Meny.classList.toggle("meny");
+ }

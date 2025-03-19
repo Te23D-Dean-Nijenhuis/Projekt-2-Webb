@@ -13,7 +13,7 @@
     <nav id="nav">
         <h2 id="Om">Om Oss</h2>
         <a href="https://wikipedia.com"><img id="logga" src="./Bilder/BOLDGEAR (2).png" alt="Bild på webbsidans logga, BOLDGEAR"></a>
-        <h2 id="VarukorgDator">Varukorg</h2>
+        <h2 id="VarukorgDator" onclick="ToggleVarukorg()">Varukorg</h2>
     </nav>
 
     <header id="header">
@@ -35,7 +35,7 @@
 
     <main>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Bälte" >
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -45,13 +45,13 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol bälte 1</button>
 
             </div>
 
         </div>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Bälte">
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -60,12 +60,12 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol bälte 2</button>
             </div>
 
         </div>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Ring">
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -74,12 +74,12 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol ring 1</button>
             </div>
 
         </div>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Ring">
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -88,12 +88,12 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol ring 2</button>
             </div>
 
         </div>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Armband">
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -102,12 +102,12 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol armband 1</button>
             </div>
 
         </div>
 
-        <div class="VaraContainer">
+        <div class="VaraContainer Armband">
 
             <div class="varaBild">
                 <img id="Vara1" src="./Bilder/65b7583833b6f.avif" alt="Flätat bälte svart vitt grått">
@@ -116,9 +116,13 @@
             <div class="Varapris">
                 <p>Pris: 150kr</p>
 
-                <button>lol</button>
+                <button>lol armband 2</button>
             </div>
 
+        </div>
+
+        <div id="VarukorgMeny">
+            <p onclick="ToggleVarukorg()">Stäng</p>
         </div>
     
     </main>
