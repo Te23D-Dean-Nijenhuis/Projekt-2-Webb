@@ -41,12 +41,7 @@ nav
     height: 100%;
 }
 
-#Varukorg
-{
-    border: solid #ffffff 2px;
-    padding: 5%;
-    border-radius: 0;
-}
+
 
 header
 {
@@ -126,6 +121,13 @@ main
         grid-template-columns: 1fr 1fr 1fr;
     
     }
+
+    #VarukorgDator
+    {
+        border: solid #ffffff 2px;
+        padding: 5%;
+        border-radius: 0;
+    }
 }
 
 @media (max-width:1023px)and (min-width: 767px)
@@ -134,6 +136,7 @@ main
     {
         grid-template-columns: 1fr 1fr;
     }
+
     nav
     {
         grid-template-columns: 1fr 2fr;
@@ -142,6 +145,17 @@ main
     header
     {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #VarukorgDator
+    {
+        display: none;
+    }
+
+    #VarukorgTablett
+    {
+        border: solid #ffffff 2px;
+        color: #ffffff;
     }
 }
 

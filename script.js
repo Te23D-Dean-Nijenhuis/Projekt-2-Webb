@@ -1,8 +1,12 @@
 window.addEventListener("resize", Flyttaitems);
 
+console.log("metod kallad,", window.innerWidth);
 
-function Flyttaitems ()
+
+function Flyttaitems()
 {
+    console.log("metod kallad,", window.innerWidth);
+
     let itemVarukorg = document.getElementById("Varukorg");
     
     let Navbar = document.getElementById("nav");
@@ -15,4 +19,5 @@ function Flyttaitems ()
         {
             Headerbar.appendChild(itemVarukorg);
         }
+
 }
