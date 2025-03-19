@@ -213,3 +213,21 @@ main
 {
     right: 0;
 }
+
+#FilterMeny
+{
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0;
+    list-style: none;
+    min-width: 150px;
+}
+
+#FilterMeny.Visa
+{
+    display: block;
+}

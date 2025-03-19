@@ -1,12 +1,11 @@
 window.addEventListener("resize", Flyttaitems);
 
-const Meny = document.getElementById("VarukorgMeny")
 
 
 function Flyttaitems()
 {
     console.log("metod kallad,", window.innerWidth);
-
+    
     let itemVarukorg = document.getElementById("Varukorg");
     
     let Navbar = document.getElementById("nav");
@@ -19,10 +18,20 @@ function Flyttaitems()
         {
             Headerbar.appendChild(itemVarukorg);
         }
+        
+    }
+const Meny = document.getElementById("VarukorgMeny");
 
-}
 
 function ToggleVarukorg()
- {
+{
     Meny.classList.toggle("meny");
- }
+}
+
+const FilterDrop = document.getElementById("FilterMeny");
+
+function FilterMeny()
+{
+    console.log("amakam")
+    FilterDrop.classList.toggle("Visa");
+}
