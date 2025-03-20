@@ -4,7 +4,7 @@ body
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 25vh 5vh minmax(100vh auto);
     margin: 0;
-    font-family: 'Inria Sans'; 
+    font-family: 'Inria Sans', 'nunito', Arial; 
 }
 
 #BUTIKEN
@@ -102,7 +102,7 @@ header
     width: 100%;
     color: #666666;
     font-size: 20px;
-    font-family: 'Inria Sans';
+    font-family: 'Inria Sans', 'nunito', Arial;
     border-radius: 10px;
 }
 
@@ -158,7 +158,10 @@ main
     border-top: solid #000000 2px;
     overflow: hidden;
     display: flex;
+    flex-direction: row;
     height: auto;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #Vara1
@@ -185,6 +188,12 @@ main
 #VarukorgMeny.meny
 {
     right: 0;
+}
+#LaggTillKnapp
+{
+    height: 80%;
+    border-radius: 4px;
+    font-family: 'Inria Sans', 'nunito', Arial;
 }
 
 #FilterMeny
