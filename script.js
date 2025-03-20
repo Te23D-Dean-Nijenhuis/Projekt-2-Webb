@@ -16,7 +16,7 @@ let ListaVaror =
     },
     {
         name: "Vara2",
-        pris: 150,
+        pris: 250,
         antal: 0
     },
     {
@@ -26,7 +26,7 @@ let ListaVaror =
     },
     {
         name: "Vara4",
-        pris: 150,
+        pris: 250,
         antal: 0
     },
     {
@@ -36,7 +36,7 @@ let ListaVaror =
     },
     {
         name: "Vara6",
-        pris: 150,
+        pris: 250,
         antal: 0
     }
 ];
@@ -52,19 +52,23 @@ main.querySelectorAll("button").forEach(button =>{
     });
 });
 
+let VarukorgLista = document.getElementById("VarukorgLista");
+
 function LaggTillVarukorg (ItemId, ListaVaror, ListaI)
 {
     if (ListaVaror[ItemId].antal > 0)
     {
         ListaVaror[ItemId].antal += 1;
-        newitem.textContent =  `${ListaVaror[ItemId].name} - ${ListaVaror[ItemId].pris * ListaVaror[ItemId].antal}`;
+        const ItemInteNew = document.querySelector(`[data-name="${ItemId}"]`)
+        ItemInteNew.textContent =  `${ListaVaror[ItemId].name} - ${ListaVaror[ItemId].antal} st - ${ListaVaror[ItemId].pris * ListaVaror[ItemId].antal}`;
         console.log(ListaVaror[ItemId].antal)
     } else
     {
         ListaVaror[ItemId].antal += 1;
-        const newitem = document.createElement("p");
-        newitem.textContent =  `${ListaVaror[ItemId].name} - ${ListaVaror[ItemId].pris * ListaVaror[ItemId].antal}`;
-        VarukorgMeny.appendChild(newitem);
+        const newitem = document.createElement("li");
+        newitem.setAttribute("data-name", ItemId)
+        newitem.textContent =  `${ListaVaror[ItemId].name} - ${ListaVaror[ItemId].antal} st - ${ListaVaror[ItemId].pris * ListaVaror[ItemId].antal}`;
+        VarukorgLista.appendChild(newitem);
         console.log(ListaVaror[ItemId].antal)
     }
 

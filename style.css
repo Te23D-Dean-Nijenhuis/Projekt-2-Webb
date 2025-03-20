@@ -113,20 +113,24 @@ main
     justify-items: center;
     align-items: center;
 }
+main
+{
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+#Varukorg
+{
+    color:#ffffff;
+    border: solid #ffffff 2px;
+    padding: 5%;
+    border-radius: 0;
+}
 
-@media (min-width:1024px) 
+@media (max-width:767px) 
 {
     main
     {
-        grid-template-columns: 1fr 1fr 1fr;
-        
-    }
-    #Varukorg
-    {
-        color:#ffffff;
-        border: solid #ffffff 2px;
-        padding: 5%;
-        border-radius: 0;
+        grid-template-columns: 1fr;
     }
     
 }
