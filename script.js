@@ -75,25 +75,35 @@ function LaggTillVarukorg (ItemId, ListaVaror, ListaI)
 }
 
 window.addEventListener("resize", Flyttaitems);
+window.addEventListener("DOMContentLoaded", Flyttaitems)
 
 function Flyttaitems()
 {
     console.log("metod kallad,", window.innerWidth);
     
     let itemVarukorg = document.getElementById("Varukorg");
+    let itemOmOss = document.getElementById("Om")
+    let itemBild = document.getElementById("LoggaContainer")
     
     let Navbar = document.getElementById("nav");
     let Headerbar = document.getElementById("header");
     
     if (window.innerWidth > 1024)
         {
+            Navbar.appendChild(itemOmOss);
+            Navbar.appendChild(itemBild);
             Navbar.appendChild(itemVarukorg);
-        } else
+        } else if (window.innerWidth > 767)
         {
             Headerbar.appendChild(itemVarukorg);
+            Navbar.appendChild(itemOmOss);
+            Navbar.appendChild(itemBild);
+        }  else 
+        {
+            Headerbar.appendChild(itemOmOss);
+            Headerbar.appendChild(itemVarukorg);
         }
-        
-    }
+}
 const VarukorgMeny = document.getElementById("VarukorgMeny");
 
 
