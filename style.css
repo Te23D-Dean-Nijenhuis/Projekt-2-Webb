@@ -125,43 +125,10 @@ main
     padding: 5%;
     border-radius: 0;
 }
-
-@media (max-width:767px) 
-{
-    main
-    {
-        grid-template-columns: 1fr;
-    }
     
-}
+    
 
-@media (max-width:1023px)and (min-width: 767px)
-{
-    main
-    {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    nav
-    {
-        grid-template-columns: 1fr 2fr;
-    }
-
-    header
-    {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    #Varukorg
-    {
-        color: #ffffff;
-        border: solid #ffffff 2px;
-        padding: 5%;
-        border-radius: 0;
-        height: 5vh;
-    }
-
-}
 
 .VaraContainer
 {
@@ -207,7 +174,7 @@ main
     right: -30vw ;
     width: 25vw;
     height: 100%;
-    background: #333;
+    background: #333333;
     color: white;
     padding: 20px;
     transition: right 0.3s ease-in-out;
@@ -234,4 +201,53 @@ main
 #FilterMeny.Visa
 {
     display: block;
+}
+
+@media (max-width:1023px)and (min-width: 767px)
+{
+    main
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav
+    {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    header
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #Varukorg
+    {
+        color: #ffffff;
+        border: solid #ffffff 2px;
+        padding: 5%;
+        border-radius: 0;
+        height: 5vh;
+    }
+
+}
+
+@media (max-width:767px) 
+{
+    main
+    {
+        grid-template-columns: 1fr;
+    }
+
+    #VarukorgMeny
+{
+    position: fixed;
+    top: 0;
+    right: -55vw ;
+    width: 40vw;
+    height: 100%;
+    background: #333333;
+    color: white;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+}
 }
