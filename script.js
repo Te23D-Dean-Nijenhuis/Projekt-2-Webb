@@ -41,6 +41,7 @@ let ListaVaror =
     }
 ];
 
+
 let main = document.querySelector("main");
 let Varor = document.getElementById("VaraContainer")
 
@@ -49,10 +50,13 @@ main.querySelectorAll("button").forEach(button =>{
         let ItemId = event.target.dataset.index;
 
         LaggTillVarukorg(ItemId, ListaVaror, ListaI);
+
+        SparaData(ListaVaror);
     });
 });
 
 let VarukorgLista = document.getElementById("VarukorgLista");
+
 
 function LaggTillVarukorg (ItemId, ListaVaror, ListaI)
 {
@@ -74,8 +78,10 @@ function LaggTillVarukorg (ItemId, ListaVaror, ListaI)
 
 }
 
+
 window.addEventListener("resize", Flyttaitems);
 window.addEventListener("DOMContentLoaded", Flyttaitems)
+window.addEventListener("DOMContentLoaded", LoadData)
 
 function Flyttaitems()
 {
@@ -121,3 +127,21 @@ function FilterMeny()
 }
 
 let ItemVara1 = document.getElementById("VaraItem1");
+
+function SparaData (ListaVaror)
+{
+    localStorage.setItem("userdata", JSON.stringify(ListaVaror));
+
+    console.log("datasparad")
+}
+
+
+function LoadData() {
+    const HamtadData = localStorage.getItem("userdata");
+    if (HamtadData) {
+        console.log("Data loaded");
+        return JSON.parse(HamtadData);
+    } else {
+        return [];
+    }
+}
