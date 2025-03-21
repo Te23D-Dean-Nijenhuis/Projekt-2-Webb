@@ -1,8 +1,14 @@
+window.addEventListener("resize", Flyttaitems);
+window.addEventListener("DOMContentLoaded", Flyttaitems)
+ // window.addEventListener("DOMContentLoaded", LoadData)
+
 let VarukorgLista = document.getElementById("VarukorgLista");
 const Balte = document.getElementsByClassName("Bälte");
 const Ringar = document.getElementsByClassName("Ring");
 const Armband = document.getElementsByClassName("Armband");
 const VarukorgMeny = document.getElementById("VarukorgMeny");
+let main = document.querySelector("main");
+let Varor = document.getElementById("VaraContainer")
 
 
 let ListaVaror = 
@@ -39,19 +45,19 @@ let ListaVaror =
     }
 ];
 
+
 LoadData();
+
 LoadVarukorg(ListaVaror);
 
 
-let main = document.querySelector("main");
-let Varor = document.getElementById("VaraContainer")
 
 main.querySelectorAll("button").forEach(button =>{
     button.addEventListener("click", function(event) {
         let ItemId = event.target.dataset.index;
-
+        
         LaggTillVarukorg(ItemId, ListaVaror);
-
+        
         SparaData(ListaVaror);
     });
 });
@@ -61,6 +67,7 @@ main.querySelectorAll("button").forEach(button =>{
 
 function LaggTillVarukorg (ItemId, ListaVaror)
 {
+    console.log("1234");
     if (ListaVaror[ItemId].antal > 0)
     {
         ListaVaror[ItemId].antal += 1;
@@ -80,10 +87,7 @@ function LaggTillVarukorg (ItemId, ListaVaror)
 }
 
 
-window.addEventListener("resize", Flyttaitems);
-window.addEventListener("DOMContentLoaded", Flyttaitems)
-window.addEventListener("DOMContentLoaded", LoadData)
-window.addEventListener("DOMContentLoaded", LoadVarukorg)
+
 
 function Flyttaitems()
 {
@@ -127,21 +131,26 @@ function FilterMeny()
     FilterDrop.classList.toggle("Visa");
 }
 
-let ItemVara1 = document.getElementById("VaraItem1");
 
 function SparaData (ListaVaror)
 {
+    console.log("SparaData :"+ListaVaror);
     localStorage.setItem("userdata", JSON.stringify(ListaVaror));
 
-    console.log("datasparad")
+    console.log("datasparad");
 }
 
 
 function LoadData() {
+    console.log("Load data start:");
+
     const HamtadData = localStorage.getItem("userdata");
     if (HamtadData) {
         ListaVaror = JSON.parse(HamtadData);
-    } 
+        console.log("Load data HämtadData ej null:");
+
+    }
+     console.log("Load data listVaror:"+ListaVaror);
 }
 
 function LoadVarukorg (ListaVaror)
@@ -182,7 +191,7 @@ function TomVarukorg (ListaVaror)
         ListaVaror[index].antal = 0;
         document.getElementById("VarukorgLista").innerHTML = "";
     }
-    SparaData();
+    SparaData(ListaVaror);
 
     console.log("aaaaa")
 
