@@ -14,32 +14,32 @@ let Varor = document.getElementById("VaraContainer")
 let ListaVaror = 
 [
     {
-        name: "Vara1",
+        name: "Bälte vitt svart grå",
         pris: 150,
         antal: 0
     },
     {
-        name: "Vara2",
+        name: "Bälte beige",
         pris: 250,
         antal: 0
     },
     {
-        name: "Vara3",
+        name: "Ring Shiny",
         pris: 150,
         antal: 0
     },
     {
-        name: "Vara4",
+        name: "Ring Grov textur",
         pris: 250,
         antal: 0
     },
     {
-        name: "Vara5",
+        name: "Fake hugo armband",
         pris: 150,
         antal: 0
     },
     {
-        name: "Vara6",
+        name: "Armband flera delar",
         pris: 250,
         antal: 0
     }
